@@ -1,0 +1,13 @@
+body {
+    font-family: "Trebuchet MS";
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.greenscreen {
+    background-color: rgb(0, 255, 0);
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2.5px;
+}

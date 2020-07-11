@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="greenscreen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            var ws = new WebSocket('ws://localhost:8082/ws');
+            var transparent_slides = [];
+            var transparency_types = ['blank', 'custom', 'song', 'scripture'];
+            var itemnumber;
+            ws.onopen = function(event) {
+                ws.send('/ws/subscribe/presentation');
+                console.log('Subscribed to websocket.')
+            };
+            ws.onmessage = function(event) {
+                if (event.data instanceof Blob) {
+                    console.log('A slide image was requested.')
+                    var img = new Image();
+                    img.src = URL.createObjectURL(event.data);
+                    document.body.appendChild(img);
+                } else {
+                    var xml = $.parseXML(event.data);
+                    var response_elem = xml.getElementsByTagName('response')[0];
+                    var response_type = response_elem.getAttribute('resource') + '/' + response_elem.getAttribute('action');
+                    console.log('Response to: ' + response_type);
+                    switch(response_type) {
+                        case 'presentation/status':
+                            var presen_elem = xml.getElementsByTagName('presentation')[0];
+                            if (presen_elem.getAttribute('running') == 1) {
+                                itemnumber = xml.getElementsByTagName('slide')[0].getAttribute('itemnumber');
+                                console.log('Current item: ' + itemnumber);
+                                ws.send('/presentation/slide');
+                            } else {
+                                $('#body_text').html('');
+                                console.log('Presentation not running.')
+                            }
+                            break;
+                        case 'presentation/slide':
+                            if (response_elem.hasAttribute('identifier')) {
+                                $('body').html('<p id="body_text"></p>');   // Reset screen.
+                                $('body').removeClass('greenscreen');
+                                console.log('An individual slide was requested.');
+                                var slide_id = response_elem.getAttribute('identifier');
+                                var slide = xml.getElementsByTagName('slide')[0];
+                                var slide_type = slide.getAttribute('type');
+                                if (transparent_slides.includes(slide_id)) {
+                                    var body_content = slide.getElementsByTagName('body')[0].firstChild;
+                                    if (body_content) {
+                                        $('#body_text').text(body_content.nodeValue);
+                                    }
+                                    $('body').addClass('greenscreen');
+                                    console.log('Slide with id ' + slide_id + ' should have greenscreen.')
+                                } else if (slide_type != 'external') {
+                                    // Request the slide as an image.
+                                    ws.send('/presentation/slide/' + slide_id + '/image');
+                                }
+                            } else {
+                                console.log('A slide set was requested.');
+                                var slides = xml.getElementsByTagName('slide');
+                                var is_transparent = false;
+                                for (var i = 0; i < slides.length; i++) {
+                                    if (slides[i].getAttribute('name').endsWith('#')) {
+                                        is_transparent = !is_transparent;
+                                    }
+                                    var slide_type = slides[i].getAttribute('type');
+                                    if (is_transparent && slides[i].hasAttribute('identifier') && transparency_types.includes(slide_type)) {
+                                        var slide_id = slides[i].getAttribute('identifier');
+                                        transparent_slides.push(slide_id);
+                                    }
+                                }
+                                ws.send('/presentation/slide/' + itemnumber);
+                            }
+                            break;
+                        default:
+                            console.log('Default: response_type = ' + response_type + '; item ' + itemnumber);
+                    }
+                }
+            };
+            ws.onerror = function(event) {
+                console.log('A websocket error occured: ' + event.data);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p id='body_text'></p>
+</body>
+
+</html>
