@@ -11,13 +11,21 @@ It supports a greenscreen for all types of slides, except type `image` and `exte
 # How to get slides with greenscreen support?
 
 Greenscreen can be used with any regular OpenSong slide set (except for the mentioned restrictions regarding supported slide types). Transparency of subsequent slides can be toggled on and off by appending a `#` to the slide name.
+
 1. Create a regular slide set in OpenSong.
+
 2. Select the first slide that should be displayed on a greenscreen (i.e. the first slide that should have a transparent background in the video stream).
+
 3. Append a `#` to the slide name. If for example the first slide with greenscreen should be `Welcome`, its name should be changed to `Welcome#` and if the first slide after it without greenscreen should be `Scripture reading` the name of the latter should be changed to `Scripture reading`.
+
 4. Save the slide set.
+
 5. Start the presentation.
+
 6. Open the file `greenscreen.html` in a webbrowser.
+
 7. Add the webbrowser as a source to the streaming video software and add a Chroma key or Color filter to turn the greenscreen into a transparent background.
+
 
 # Notes
 
