@@ -32,3 +32,8 @@ Greenscreen can be used with any regular OpenSong slide set (except for the ment
 - Be sure to correctly configure the OpenSong API (*Settings* > *General Settings* > *System*) and the system network connection properties.
 - The greenscreen and text formatting can be configured in the CSS-file (`greenscreen.css`). Its default configuration uses an outline font for optimal legibility when the green filter is applied. 
 - The URL to the OpenSong API is assumed to be on localhost (port 80), but this can easily be changed in the JavaScript code in the HTML-page (greenscreen.html). 
+
+# TODO
+
+- Create a workaround for `external` slide type.
+- Check whether status is frozen and freeze current slide.
