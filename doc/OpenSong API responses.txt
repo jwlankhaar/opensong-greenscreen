@@ -1,0 +1,52 @@
+slide types:
+- style
+- blank
+- image
+- custom
+- song
+- scripture
+- external
+
+# Find current slide:
+	uri: /presentation/status
+	response:
+		presentation
+			slide > attr "itemnumber"
+			
+	Attributes of response:
+	- resource
+	- action
+		
+# Get list of slides in set:
+	uri: /presentation/slide
+	response:
+		slide
+			title
+			subtitle
+		slide
+		...
+		
+	Attributes of slide:
+	- name
+	- identifier (n/a if type "style")
+	- type
+	
+	Notes
+	- Slide is 'atomic' (i.e. multiple slides within a single item in slide editor that have been split by --- are 
+	individual slides in the response).
+	- Automatically inserted slides are also individual slides in the response.
+	- Slide element in response does not contain slide content other than title and subtitle
+	- Note that identifier seems to be identical to itemnumber in the response to "/presentation/status".
+	
+# Get a specific slide:
+	uri: /presentation/slide/<identifier>
+	response:
+		slide
+			slides
+				slide
+					body
+			title
+			presentation
+			notes
+			subtitle
+		
