@@ -1,2 +1,5 @@
 opensong-greenscreen.code-workspace
 .vscode/
+jsconfig.json
+builds/
+fixtures/

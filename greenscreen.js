@@ -62,7 +62,7 @@ function onMessage(event, messageParser) {
                     if (messageParser.transparentSlides.includes(messageParser.identifier)) {
                        showSlideOnGreenscreen(messageParser);
                     } else if (messageParser.type != 'external') {
-                        requestSlideAsImage(messageParser.identifier);
+                       requestSlideAsImage(messageParser.identifier);
                     }
                     break;
                 case 'freeze':

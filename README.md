@@ -10,21 +10,17 @@ It supports a green screen for all types of slides, except type `image` and `ext
 
 # How to get slides with greenscreen support?
 
-OpenSong Green screen can be used with any regular OpenSong slide set (except for the mentioned restrictions regarding supported slide types). Transparency of subsequent slides can be toggled on and off by appending a `#` to the slide name.
+OpenSong Green screen can be used with any regular OpenSong slide set (except for the mentioned restrictions on supported slide types). All slides of the types `custom`, `blank`, `song` and `scripture` will be rendered as text on a transparent background.
 
 1. Create a regular slide set in OpenSong.
 
-2. Select the first slide that should be displayed on a green screen (i.e. the first slide that should have a transparent background in the video stream).
+2. Save the slide set.
 
-3. Append a `#` to the slide name to toggle transparency on and of. If for example the first slide with green screen should be `Welcome`, its name should be changed to `Welcome#` and if the first slide after it without green screen should be `Scripture reading` the name of the latter should be changed to `Scripture reading#`.
+3. Start the presentation.
 
-4. Save the slide set.
+4. Open the file `greenscreen.html` in a webbrowser.
 
-5. Start the presentation.
-
-6. Open the file `greenscreen.html` in a webbrowser.
-
-7. Add the webbrowser as a source to the streaming video software and add a Chroma key or Color filter to turn the greenscreen into a transparent background.
+Note that by editing the file `greenscreen.css` the text can also be displayed on a green background that can be removed by the streaming video software (using a Chroma key or Color filter).
 
 
 # How to set up a Browser source in OBS Studio with a green screen?
@@ -51,6 +47,8 @@ Since OBS Studio ships with its own web browser engine, the file `greenscreen.ht
 
 ## Add a Chroma key filter to the source
 
+Note that a Chroma key filter is only neccessary when the green background color option is chosen in `greenscreen.css`. 
+
 1. Right-click the created browser source and click **Filters**
 
 2. In the lower panel (**Effect filters**), click the plus sign and select **Chroma Key**
@@ -76,14 +74,14 @@ Since OBS Studio ships with its own web browser engine, the file `greenscreen.ht
 
 - Be sure to correctly configure the OpenSong API (*Settings* > *General Settings* > *System*) and the system network connection properties.
 - The greenscreen and text formatting can be configured in the CSS-file (`greenscreen.css`). Its default configuration uses an outline font for optimal legibility when the green filter is applied. 
-- The URL to the OpenSong API is assumed to be on localhost (port 80), but this can easily be changed in `config.js`. 
+- The URL to the OpenSong API is assumed to be on localhost (port 80), but this can be changed in `config.js`. 
 - After adding the source and the chroma key, the source may not always be active immediately. Toggle source visibility a few times or select a new slide in OpenSong to activate it.
 
 # TODO
 
 - Create a workaround for `external` slide type.
 
-# Release notes July 17
+# Release notes July 17, 2020
 
 ## Major update
 
@@ -93,3 +91,8 @@ Since OBS Studio ships with its own web browser engine, the file `greenscreen.ht
 - Optimal font sizing configured
 - Added alert presentation not running to browser tab title
 - Added support for OpenSong freeze, black and white screen modes
+
+# Release notes July 22, 2020
+
+- All transparent type slides are _always_ displayed on greenscreen (i.e. toggling by `#` in the name is removed).
+- Added transparent background option (default) which bypasses the need for a Chroma key filter.

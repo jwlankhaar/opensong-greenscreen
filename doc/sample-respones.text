@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response resource="presentation" action="slide">
+    <slide name="" type="style"/>
+    <slide identifier="1" name="" type="blank">
+        <title>
+        </title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="2" name="Vooraf#" type="custom">
+        <title></title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="3" name="Vooraf#" type="custom">
+        <title></title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="4" name="" type="blank">
+        <title></title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="5" name="Tweede item in set" type="custom">
+        <title></title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="6" name="" type="blank">
+        <title></title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="7" name="Derde item#" type="custom">
+        <title>Titel van derde item</title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="8" name="" type="blank">
+        <title></title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="9" name="Untitled" type="image">
+        <title></title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="10" name="" type="blank">
+        <title></title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="11" name="Johannes 3:16|Herziene Statenvertaling" type="scripture">
+        <title>Johannes 3:16</title>
+        <subtitle>Herziene Statenvertaling</subtitle>
+    </slide>
+    <slide identifier="12" name="" type="blank">
+        <title></title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="13" name="Weerklank 15" type="song">
+        <title>Weerklank 15</title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="14" name="Weerklank 15" type="song">
+        <title>Weerklank 15</title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="15" name="Weerklank 15" type="song">
+        <title>Weerklank 15</title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="16" name="Weerklank 15" type="song">
+        <title>Weerklank 15</title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="17" name="Weerklank 15" type="song">
+        <title>Weerklank 15</title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="18" name="Weerklank 15" type="song">
+        <title>Weerklank 15</title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="19" name="Weerklank 15" type="song">
+        <title>Weerklank 15</title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="20" name="Weerklank 15" type="song">
+        <title>Weerklank 15</title>
+        <subtitle></subtitle>
+    </slide>
+    <slide identifier="21" name="" type="blank">
+        <title></title>
+        <subtitle></subtitle>
+    </slide>
+</response>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response resource="presentation" action="slide" identifier="1">
+    <slide type="blank" loop="false">
+        <slides>
+            <slide>
+                <body></body>
+            </sl
+ide>
+        </slides>
+        <title/>
+        <presentation/>
+        <notes/>
+        <subtitle/>
+    </slide>
+</response>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response resource="presentation" action="slide" identifier="4">
+    <slide type="blank" loop="false">
+        <slides>
+            <slide>
+                <body></body>
+            </slide>
+        </slides>
+        <title/>
+        <subtitle/>
+    </slide>
+</response>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response resource="presentation" action="slide">
+    <slide name="" type="style"/>
+    <slide identifier="1" name="" type="blank">
+        <title>
+            <
+/title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="2" name="Vooraf#" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="3" name="Vooraf#" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="4" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="5" name="Tweede item in set" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="6" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="7" name="Derde item#" type="custom">
+                <title>Titel van derde item</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="8" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="9" name="Untitled" type="image">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="10" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="11" name="Johannes 3:16|Herziene Statenvertaling" type="scripture">
+                <title>Johannes 3:16</title>
+                <subtitle>Herziene Statenvertaling</subtitle>
+            </slide>
+            <slide identifier="12" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="13" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="14" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="15" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="16" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="17" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="18" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="19" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="20" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="21" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+        </response>
+
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response resource="presentation" action="slide">
+            <slide name="" type="style"/>
+            <slide identifier="1" name="" type="blank">
+                <title>
+                </title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="2" name="Vooraf#" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="3" name="Vooraf#" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="4" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="5" name="Tweede item in set" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="6" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="7" name="Derde item#" type="custom">
+                <title>Titel van derde item</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="8" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="9" name="Untitled" type="image">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="10" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="11" name="Johannes 3:16|Herziene Statenvertaling" type="scripture">
+                <title>Johannes 3:16</title>
+                <subtitle>Herziene Statenvertaling</subtitle>
+            </slide>
+            <slide identifier="12" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="13" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="14" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="15" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="16" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="17" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="18" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="19" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="20" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="21" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+        </response>
+
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response resource="presentation" action="status">
+            <presentation running="1">
+                <screen mode="N">normal</screen>
+                <slide itemnumber="1">
+                    <name></name>
+                    <title></title>
+                </slide>
+            </presentation>
+        </response>
+
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response resource="presentation" action="slide">
+            <slide name="" type="style"/>
+            <slide identifier="1" name="" type="blank">
+                <title>
+                </title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="2" name="Vooraf#" type="custom">
+                <title>wja_title</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="3" name="Vooraf#" type="custom">
+                <title>wja_title</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="4" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="5" name="Tweede item in set" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="6" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="7" name="Derde item#" type="custom">
+                <title>Titel van derde item</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="8" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="9" name="Untitled" type="image">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="10" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="11" name="Johannes 3:16|Herziene Statenvertaling" type="scripture">
+                <title>Johannes 3:16</title>
+                <subtitle>Herziene Statenvertaling</subtitle>
+            </slide>
+            <slide identifier="12" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="13" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="14" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="15" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="16" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="17" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="18" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="19" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="20" name="Weerklank 15" type="song">
+                <title>Weerklank 15</title>
+                <subtitle></subtitle>
+            </slide>
+            <slide identifier="21" name="" type="blank">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+        </response>
+
+
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response resource="set" action="list">
+            <set id="0">dienst-20191027-02</set>
+            <set id="1">dienst-20191124-01</set>
+            <set id="2">dienst-20200105-01</set>
+            <set id="3">dienst-20200105-02</set>
+            <set id="4">dienst-20200110-01 -HA</set>
+            <set id="5">dienst-20200112-02</set>
+            <set id="6">dienst-20200119-01</set>
+            <set id="7">dienst-20200119-02</set>
+            <set id="8">dienst-20200126-01</set>
+            <set id="9">dienst-20200126-02</set>
+            <set id="10">dienst-20200202-01</set>
+            <set id="11">dienst-20200202-02</set>
+            <set id="12">dienst-20200209-01</set>
+            <set id="13">dienst-20200209-02</set>
+            <set id="14">dienst-20200216-01</set>
+            <set id="15">Dienst-20200223-01</set>
+            <set id="16">Dienst-20200301-01</set>
+            <set id="17">dienst-20200301-02</set>
+            <set id="18">dienst-20200308-01</set>
+            <set id="19">dienst-20200308-02</set>
+            <set id="20">dienst-20200315-01</set>
+            <set id="21">dienst-20200322-01</set>
+            <set id="22">dienst-20200327-01</set>
+            <set id="23">dienst-20200405-01</set>
+            <set id="24">dienst-20200410-01</set>
+            <set id="25">dienst-20200412-01</set>
+            <set id="26">dienst-20200419-01</set>
+            <set id="27">dienst-20200426-01</set>
+            <set id="28">dienst-20200503-01</set>
+            <set id="29">dienst-20200510-01</set>
+            <set id="30">dienst-20200514-01</set>
+            <set id="31">dienst-20200517-01</set>
+            <set id="32">dienst-20200521-01</set>
+            <set id="33">dienst-20200521-01-test</set>
+            <set id="34">dienst-20200524-01-jw</set>
+            <set id="35">dienst-20200531-01</set>
+            <set id="36">dienst-20200619-01-rouwdienst</set>
+            <set id="37">dienst-20200705-01</set>
+            <set id="38">dienst-20200705-02</set>
+            <set id="39">dienst-20200711-01</set>
+            <set id="40">dienst-20200712-01</set>
+            <set id="41">dienst-20200712-02</set>
+            <set id="42">dienst-20200719-01</set>
+            <set id="43">dienst-20200719-02</set>
+            <set id="44">Example</set>
+            <set id="45">kinderkerstfeest-20181224-01</set>
+            <set id="46">Sets20200712-02.zip</set>
+            <set id="47">template - Frank</set>
+            <set id="48">test</set>
+            <set id="49">test-greenscreen</set>
+            <set id="50">test2</set>
+            <set id="51">testimage</set>
+            <set id="52">test_greensc</set>
+            <set id="53">test_transp</set>
+            <set id="54">test_transp2</set>
+            <set id="55">voorbeeld</set>
+        </response>
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response resource="set" action="slides" identifier="test_transp2">
+            <slide id="1" name="Vooraf#" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide id="2" name="Titel" type="image">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide id="3" name="Ook transp" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide id="4" name="Tekst met enter" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide id="5" name="Tekst zonder enter" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+            <slide id="6" name="Niet meer transp#" type="custom">
+                <title></title>
+                <subtitle></subtitle>
+            </slide>
+        </response>

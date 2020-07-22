@@ -28,6 +28,8 @@ class OpenSongMessageParser {
     }
 
     initMessage(message) {
+        var re;
+
         if (message instanceof Blob) {
             this.isXMLMessage = false;
             this.image = new Image();
@@ -35,6 +37,10 @@ class OpenSongMessageParser {
         }
         else {
             try {
+                // re = /<[^>]*(\v+)/g;     // Matches CR and/or LF within element tag (e.g. <CRLFtitle>).
+                // console.log(message);
+                // message = message.replace(re, '');
+                // console.log(message);
                 this.XML = $.parseXML(message);
                 this.isXMLMessage = true;
             }
@@ -69,7 +75,7 @@ class OpenSongMessageParser {
 
     parse(message) {
         var presentationElement, slideElement, responseElement, slides,
-            isTransparent = false, slideId, uri, type, screenElement;
+            isTransparent = false, slideId, uri, type, slideName;
 
         this.initMessage(message);
         if (this.isXMLMessage) {
@@ -103,12 +109,26 @@ class OpenSongMessageParser {
                     else {  // Slide set.
                         slides = responseElement.getElementsByTagName('slide');
                         for (var i = 0; i < slides.length; i++) {
-                            if (slides[i].getAttribute('name').endsWith('#')) {
-                                isTransparent = !isTransparent;
-                            }
+                            // if (slides[i].hasAttribute('name')) {
+                            //     slideName = slides[i].getAttribute('name');
+                            // } else {
+                            //     slideName = '';
+                            // }
+                            // if (slideName.endsWith('#')) {
+                            //     isTransparent = !isTransparent;
+                            // }
+                            // type = slides[i].getAttribute('type');
+                            // if (isTransparent && 
+                            //     slides[i].hasAttribute('identifier') &&
+                            //     this.transparencyTypes.includes(type)) 
+                            // {
+                            //     slideId = slides[i].getAttribute('identifier');
+                            //     this.transparentSlides.push(slideId);
+                            // }
                             type = slides[i].getAttribute('type');
-                            if (isTransparent && slides[i].hasAttribute('identifier') &&
-                                this.transparencyTypes.includes(type)) {
+                            if (this.transparencyTypes.includes(type) && 
+                                slides[i].hasAttribute('identifier')) 
+                            {
                                 slideId = slides[i].getAttribute('identifier');
                                 this.transparentSlides.push(slideId);
                             }

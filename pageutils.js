@@ -21,9 +21,15 @@ function addImageHTML(img) {
 }
 
 function addTextHTML(txt) {
-    // $('body').html(`<pre>${txt}</pre>`);
-    $('#content').append(`<pre>${txt}<\pre>`);
-    // document.body.appendChild.html(`<pre>${txt}<\pre>`);
+    var html;
+
+    if (txt.length > 0 && /[\n\t\r]+/.test(txt)) {
+        // Show text verbatim, if it contains newlines, tabs or linefeeds.
+        html = `<pre>${txt}<\pre>`;
+    } else {
+        html = `<p>${txt}<\p>`;
+    }
+    $('#content').append(html);
 }
 
 function turnGreenscreenOn() {
