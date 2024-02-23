@@ -55,16 +55,16 @@ Note that a Chroma key filter is only neccessary when the green background color
 
 3. Enter the following settings:
 
-    | Parameter | Value |
-    | --------- | ----: |
-    | Key Color Type | Green |
-    | Similarity | 400 |
-    | Smoothness | 80 |
-    | Key Color Spill Reduction | 100 |
-    | Opacity | 100 |
-    | Contrast | 0 |
-    | Brightness | 0 |
-    | Gamma | 0 |
+    | Parameter                 | Value |
+    | ------------------------- | ----: |
+    | Key Color Type            | Green |
+    | Similarity                |   400 |
+    | Smoothness                |    80 |
+    | Key Color Spill Reduction |   100 |
+    | Opacity                   |   100 |
+    | Contrast                  |     0 |
+    | Brightness                |     0 |
+    | Gamma                     |     0 |
 
 4. Click **Close**
 
@@ -96,3 +96,9 @@ Note that a Chroma key filter is only neccessary when the green background color
 
 - All transparent type slides are _always_ displayed on greenscreen (i.e. toggling by `#` in the name is removed).
 - Added transparent background option (default) which bypasses the need for a Chroma key filter.
+
+# Release notes February 23, 2024
+
+- Text always aligns vertically to the bottom.
+- Font changed (font family, color slightly off-white).
+- A few minor code changes.
