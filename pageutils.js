@@ -12,12 +12,11 @@ function convertBlobToImage(imageBlob) {
 
 function resetScreenHTML() {
     $('#content').html('');   // Reset screen.
-    $('body').removeClass('greenscreen');
+    turnGreenscreenOff();
 }
 
 function addImageHTML(img) {
     $('#content').append(`<img src=${img.src}>`)
-    // $('#content').append(img);
 }
 
 function addTextHTML(txt) {
@@ -39,7 +38,6 @@ function turnGreenscreenOn() {
 function turnGreenscreenOff() {
     $('body').removeClass('greenscreen');
 }
-
 
 function setTitleAlert(message) {
     var title;
