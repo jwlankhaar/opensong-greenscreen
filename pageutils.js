@@ -11,24 +11,23 @@ function blobToImage(imageBlob) {
 }
 
 function resetScreen() {
-    $('#texts').html('');
-    $('#images').html('');
+    $('#text-container').html('');
+    $('#image-container').html('');
     $('body').removeClass('greenscreen');
 }
 
 function showImage(img) {
     let html = `<img src=${img.src}>`;
-    $('#images').append(html);
+    $('#image-container').append(html);
 }
 
 function showText(txt) {
     let html = `<p>${preprocessText(txt)}</p>`;
-    $('#texts').append(html);
+    $('#text-container').append(html);
 }
 
 function preprocessText(txt) {
-    let regex = /[\n\r]{1}/;
-    return txt.replace(regex, '<br>');
+    return txt.replaceAll('\n', '<br>');
 }
 
 function turnGreenscreenOn() {

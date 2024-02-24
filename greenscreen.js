@@ -70,11 +70,10 @@ function onMessage(event, parser) {
                         }
                         turnGreenscreenOn();
                     } else if (parser.type != 'external') {
-                        // requestSlideAsImage(parser.identifier);
-                        sendUri = WS_METHODS.getSlideAsImageURI.replace(
-                            '/identifier/', `/${identifier}/${WS_PARAMS.imageProperties}`
-                        );
-                        console.log(`Request slide ${identifier} as image.`)
+                        sendUri = WS_METHODS.getSlideAsImage.replace(
+                            'identifier', parser.identifier
+                        ) + WS_PARAMS.imageProperties;
+                        console.log(`Request slide ${parser.identifier} as image.`)
                         ws.send(sendUri);
                     }
                     break;
