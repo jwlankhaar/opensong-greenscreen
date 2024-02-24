@@ -105,9 +105,8 @@ class OpenSongMessageParser {
                         slides = responseElement.getElementsByTagName('slide');
                         for (var i = 0; i < slides.length; i++) {
                             type = slides[i].getAttribute('type');
-                            if (this.transparencyTypes.includes(type) && 
-                                slides[i].hasAttribute('identifier')) 
-                            {
+                            if (this.transparencyTypes.includes(type) &&
+                                slides[i].hasAttribute('identifier')) {
                                 slideId = slides[i].getAttribute('identifier');
                                 this.transparentSlides.push(slideId);
                             }

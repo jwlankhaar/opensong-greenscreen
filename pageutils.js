@@ -4,31 +4,30 @@
 // 
 /* ---------------------------------------------------------------------------*/
 
-function convertBlobToImage(imageBlob) {
+function blobToImage(imageBlob) {
     var img = new Image();
     img.src = URL.createObjectURL(imageBlob);
     return img;
 }
 
-function resetScreenHTML() {
-    $('#content').html('');   // Reset screen.
-    turnGreenscreenOff();
+function resetScreen() {
+    $('#text-container').html('');
+    $('#image-container').html('');
+    $('body').removeClass('greenscreen');
 }
 
-function addImageHTML(img) {
-    $('#content').append(`<img src=${img.src}>`)
+function showImage(img) {
+    let html = `<img src=${img.src}>`;
+    $('#image-container').append(html);
 }
 
-function addTextHTML(txt) {
-    var html;
+function showText(txt) {
+    let html = `<p>${preprocessText(txt)}</p>`;
+    $('#text-container').append(html);
+}
 
-    if (txt.length > 0 && /[\n\t\r]+/.test(txt)) {
-        // Show text verbatim, if it contains newlines, tabs or linefeeds.
-        html = `<pre>${txt}<\pre>`;
-    } else {
-        html = `<p>${txt}<\p>`;
-    }
-    $('#content').append(html);
+function preprocessText(txt) {
+    return txt.replaceAll('\n', '<br>');
 }
 
 function turnGreenscreenOn() {
@@ -40,10 +39,9 @@ function turnGreenscreenOff() {
 }
 
 function setTitleAlert(message) {
-    var title;
-
-    title = $('title').text();
-    title += ` (${message})`;
-    title = title.replace('()', '');
+    var title = $('title').text();
+    if (message.length > 0) {
+        title += ` - ${message}`;
+    }
     $('title').text(title);
 }
