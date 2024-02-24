@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     font-family: "Trebuchet MS";
-    font-size: 90px;        /* pixel-size = 2.8125 x point-size-in-OpenSong */
+    font-size: 90px;
+    /* pixel-size = 2.8125 x point-size-in-OpenSong */
     font-weight: bold;
     text-align: center;
 }
@@ -19,7 +20,7 @@ body div {
     margin: 0;
 }
 
-#content {
+#texts {
     text-align: center;
     margin: 50vh auto 0;
     transform: translateY(-50%);
@@ -28,8 +29,10 @@ body div {
 .greenscreen {
     margin: 0;
     padding: 0;
-    /* background-color: rgb(0,255,0); */   /* Option 1: text on a green background. */
-    background-color: rgb(0,255,0) transparent;    /* Option 2: text on a transparent background. */
+    /* background-color: rgb(0,255,0); */
+    /* Option 1: text on a green background. */
+    background-color: rgb(0, 255, 0) transparent;
+    /* Option 2: text on a transparent background. */
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 3px;
 }
