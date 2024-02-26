@@ -1,7 +1,4 @@
 var ws, itemnumber, transparentSlides;
-var WS_METHODS = config.websocket.uri.methods;
-var WS_PARAMS = config.websocket.uri.parameters;
-
 
 $(document).ready(
     function () {
@@ -21,14 +18,13 @@ $(document).ready(
 )
 
 function createWebSocket() {
-    var pars = config.websocket;
-    var uri = `ws://${pars.host}:${pars.port}/ws`;
-    return new WebSocket(uri);
+    console.log(`Creating new websocket: ${URI.baseUri}`);
+    return new WebSocket(URI.baseUri);
 }
 
 function onOpen(event) {
-    ws.send(WS_METHODS.subscribeToWebSocket);
-    console.log(`Requested websocket subscription. (${WS_METHODS.subscribeToWebSocket})`);
+    console.log(`Requesting websocket subscription: ${URI.subscribeToWebSocket}`);
+    ws.send(URI.subscribeToWebSocket);
 }
 
 function onMessage(event, parser) {
@@ -37,7 +33,7 @@ function onMessage(event, parser) {
     uri = parser.parse(event.data);
     console.log(`Reconstructed uri: ${uri}`);
     switch (uri) {
-        case WS_METHODS.getPresentationStatus:
+        case URI.getPresentationStatus:
             if (parser.isPresentationRunning) {
                 itemnumber = parser.itemnumber;
                 setTitleAlert('');
@@ -47,11 +43,11 @@ function onMessage(event, parser) {
                 setTitleAlert('presentation is not running')
                 resetScreen();
             }
-            ws.send(WS_METHODS.listSlidesInSet);
+            ws.send(URI.listSlidesInSet);
             break;
-        case WS_METHODS.listSlidesInSet:
+        case URI.listSlidesInSet:
             console.log('Slide set received.');
-            sendUri = WS_METHODS.getSlideAsXML.replace(
+            sendUri = URI.getSlideAsXML.replace(
                 '/identifier',
                 '/' + parser.itemnumber
             );
@@ -59,7 +55,7 @@ function onMessage(event, parser) {
             // instead of slideId.
             ws.send(sendUri);
             break;
-        case WS_METHODS.getSlideAsXML:
+        case URI.getSlideAsXML:
             console.log('Individual slide received.');
             switch (parser.mode) {
                 case 'normal':
@@ -70,9 +66,9 @@ function onMessage(event, parser) {
                         }
                         turnGreenscreenOn();
                     } else if (parser.type != 'external') {
-                        sendUri = WS_METHODS.getSlideAsImage.replace(
+                        sendUri = URI.getSlideAsImage.replace(
                             'identifier', parser.identifier
-                        ) + WS_PARAMS.imageProperties;
+                        ) + URI.imageProperties;
                         console.log(`Request slide ${parser.identifier} as image.`)
                         ws.send(sendUri);
                     }
@@ -86,7 +82,7 @@ function onMessage(event, parser) {
                     break;
             }
             break;
-        case WS_METHODS.getSlideAsImage:
+        case URI.getSlideAsImage:
             if (parser.image) {
                 resetScreen();
                 showImage(parser.image);

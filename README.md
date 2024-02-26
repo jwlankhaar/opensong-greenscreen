@@ -102,3 +102,9 @@ Note that a Chroma key filter is only neccessary when the green background color
 - Text always aligns vertically to the bottom.
 - Font changed (font family, color slightly off-white).
 - A few minor code changes.
+
+# Release notes February 26, 2024
+
+- Separate containters for text and images, making text and image sizing more flexible.
+- Move URI's to separate file (`wsschema.js` instead of in `config.js` file).
+- Minor code changes.
